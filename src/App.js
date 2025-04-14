@@ -1,25 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import './julien.css';
 
-function App() {
+function Pizza() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="oasis">
+       <h5 className="btn btn-outline-danger">Pizza</h5>
     </div>
   );
 }
-
-export default App;
+export default Pizza;
