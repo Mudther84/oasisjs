@@ -1,8 +1,433 @@
 body {
     background-color: #222;
-    color: yellow;
+    /*background-image: url(pexels-littlesoad-2909822.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    color: #fff;
 }
-h5{
-    width: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  min-height: 200vh;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+i{
+    color: #fff;
+}
+ul {
+  list-style: none;
+}
+/*Header style*/
+header {
+  position: fixed;
+  top: o;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0,6s;
+  padding: 40px 100px;
+  z-index: 10000;
+}
+header.sticky {
+  padding: 5px 100px;
+  background-color: #012738;
+}
+header.sticky ul li a {
+  color: #fff;
+}
+header a:hover{
+  border-bottom: 2px solid #F28123;
+  color: #fff;
+}
+header.sticky .logo,
+header.logo {
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+  list-style: none;
+}
+header ul li a {
+position: relative;
+margin: 0 15px;
+text-decoration: none;
+color: #fff;
+letter-spacing: 2px;
+font-weight: 500px;
+transition: 0,6s;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /*background: url(header.jpg);*/
+  background-size: cover;
+  position: relative;
+}
+.banner::before{
+  content: "";
+  background-color: #01273874;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.banner p{
+  color: #fff;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 600;
+  font-size: xx-large;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform:  translateY(-50%);
+  display: flex;
+ text-align: center;
+}
+.banner p::first-letter{
+  color: #fff;
+}
+.welcome-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(header.jpg); /* Add a background image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text visibility */
+}
+
+.welcome-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.welcome-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.welcome-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.menu-button {
+  padding: 10px 25px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #d35400;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  background-color: #e67e22; 
+}
+/*Header style end*/
+.container {
+    max-width: 1100px;
     margin: auto;
-    }
+  }
+  
+  /* About Start */
+  #history .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  #history .container p{
+    color: #fff;
+  }
+  #history h2 {
+    font-size: 2.5em;
+    color: #ffab65; /* Darker orange for the heading */
+    margin-bottom: 20px;
+  }
+  
+  #history p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+  
+  #history p::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffab65; 
+  }
+  /* About End */
+  /* Menu Section Start */
+  .card-body{
+    background-color: #222;
+  }
+  .card-title{
+    color: #FFF;
+  }
+  .card-img-top{
+    background-color: #222;
+  }
+/* Menu Section End */
+/*news start*/
+.news-item {
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .news-item img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .news-content {
+    padding: 20px;
+    text-align: left;
+   
+  }
+  
+  .news-content h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .news-content .date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .news-content p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+  }
+  /*news end*/
+  /* Contact Section start */
+.form-title {
+    margin-bottom: 25px;
+  }
+  
+  .form-title h2 {
+    font-size: 25px;
+  }
+  
+  .form-title p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  
+  .contact-form form p input[type=text], .contact-form form p input[type=tel], .contact-form form p input[type=email] {
+    width: 49%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #222;
+  }
+  
+  .contact-form form p textarea {
+    border: 1px solid #ddd;
+    padding: 15px;
+    height: 200px;
+    border-radius: 3px;
+    width: 100%;
+    resize: none;
+    background-color: #222;
+  }
+  .news-content{
+    background-color: #222;
+  }
+  .news-content h3, .news-content p, .news-content span{
+    color: white;
+  }
+  /*.contact-form form p input[type=text], .contact-form form p input[type=tel], .contact-form form p input[type=email]:hover {
+  border: #F28123;
+  }*/
+  .contact-form-wrap {
+    background-color: #333;
+    padding: 45px 30px;
+    border-radius: 5px;
+  }
+  
+  .contact-form-box {
+    padding-left: 40px;
+    margin-bottom: 30px;
+    
+  }
+  
+  .contact-form-box h4 {
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form-box h4 i {
+    position: absolute;
+    left: -13%;
+    color: #F28123;
+    top: 2px;
+  }
+  
+  .contact-form-box p {
+    line-height: 1.8;
+    opacity: 0.8;
+  }
+  
+  .contact-form-wrap .contact-form-box:last-child {
+    margin: 0;
+  }
+  .contact-form input[type="submit"] {
+    width: 50px;
+    color: #fff;
+    padding: 0;
+    border-style: none;
+    background-color: #012738;
+    border-radius: 20ox;
+  }
+  .contact-form input[type="submit"]:focus {
+    border: 1px solid #F28123; 
+  outline: none;
+  }
+  /* Contact Section End */
+  /*footer start*/
+.single-logo-item img {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+  
+  .logo-carousel-section {
+    background-color: #f5f5f5;
+    padding: 50px 0;
+  }
+  
+  .footer-area {
+    background-color: #051922;
+    color: #fff;
+    padding: 150px 0;
+  }
+  
+  h2.widget-title {
+    font-size: 24px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 20px;
+    color: #fff;
+  }
+  
+  h2.widget-title:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20px;
+    height: 2px;
+    background-color: #F28123;
+    content: "";
+  }
+  
+  .footer-box p {
+    color: #fff;
+    opacity: 0.7;
+    line-height: 1.8;
+  }
+  
+  .footer-box ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .footer-box ul li {
+    opacity: 0.7;
+    margin-bottom: 10px;
+    line-height: 1.8;
+  }
+  .footer-box a:hover {
+    border-bottom: 2px solid #F28123;
+    color: #fff;
+  }
+  .footer-box a{
+    color: #fff;
+    text-decoration: none;
+  }
+  .footer-box ul li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .footer-box.subscribe form input[type=email] {
+    border: none;
+    background-color: #012738;
+    width: 78%;
+    padding: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #fff;
+  }
+  
+  .footer-box.subscribe form button {
+    width: 20%;
+    border: none;
+    background-color: #012738;
+    color: #F28123;
+    padding: 14px 0;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .footer-box.subscribe form button:focus {
+    outline: none;
+  }
+        /*footer end*/

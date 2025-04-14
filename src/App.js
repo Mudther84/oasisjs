@@ -1,10 +1,24 @@
-import './julien.css';
-
-function Pizza() {
+import React from 'react';
+//import ReactDOM from "react-dom/client";
+//import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import Navbar from './pages2/fixed_navbar';
+function App() {
   return (
-    <div className="oasis">
-       <h5 className="btn btn-outline-danger">Pizza</h5>
+    <div>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/Navbar" element={<Navbar />} />
+          {/*<Route path="/news" element={<News />} />
+          <Route path="/menu" element={<Menu />} />*/}
+        </Routes>
+      </Router>
     </div>
   );
 }
-export default Pizza;
+export default App;
